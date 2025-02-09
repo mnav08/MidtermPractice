@@ -15,6 +15,7 @@ public class JavaApplication3 {
      */
     public static void main(String[] args) {
         int moi=5;
+        System.out.println(moi);
     }
     
 }
