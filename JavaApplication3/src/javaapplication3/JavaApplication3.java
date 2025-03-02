@@ -1,21 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package javaapplication3;
+import java.util.Scanner;
 
-/**
- *
- * @author navas
- */
+
 public class JavaApplication3 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        int moi=5;
-        System.out.println(moi);
+        String name;
+        int age;
+        int rating;
+        String position;
+        
+        Scanner sc= new Scanner(System.in);
+      
+        System.out.print("Enter player name: ");
+        name=  sc.nextLine();
+        
+         System.out.print("Enter player age: ");
+         age=  sc.nextInt();
+         
+         System.out.print("Enter player rating: ");
+        rating=  sc.nextInt();
+        // Consume the leftover newline character
+        sc.nextLine(); // This is important to move past the newline after nextDouble()
+         System.out.print("Enter player position: ");
+        position=  sc.nextLine();
+        System.out.println();
+     
+        Player cr= new Player(name,position,age,rating);
+        System.out.println("Your player is "+cr.getName());
+        System.out.println("His position is "+cr.getPosition());
+        System.out.println("His age is "+cr.getAge());
+        System.out.println("Rating--> "+cr.getRating());
+       
     }
     
 }
