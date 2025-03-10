@@ -1,26 +1,26 @@
 package excersices_;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Excersices_ {
     public static void main(String[] args) {
-        //sum of even numbers
-        
-        int num;
-        int sum = 0;
-        String input = JOptionPane.showInputDialog("Enter a positive integer:");
-        // Convert input string to integer
-        num = Integer.parseInt(input);
-      
-        for(int i=1; i<=num;i++){
-            if(i%2==0){
-                sum+=i;
-            }
-        } JOptionPane.showMessageDialog(null, "The sum of even numbers from 1 to " + num + " is: " + sum);
-
-        
-        
-       
-        
+     String name;
+     int id;
+     double grades;
+     int subjects;
+     Scanner input = new Scanner(System.in);
+     System.out.println("Enter student name: ");
+     name= input.nextLine();
+     
+     System.out.println("Enter student ID: ");
+     id= input.nextInt();
+     
+     System.out.print("Enter number of subjects: ");
+     subjects= input.nextInt();
+     System.out.println();
+     Objeto Student1= new Objeto(name,id);
+     Student1.inputGrades(subjects);
+     Student1.calculateAverage();
+     Student1.displayInfo();
     }
     
 }
